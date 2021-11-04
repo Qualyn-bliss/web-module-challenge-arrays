@@ -45,9 +45,11 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-  /*your code here*/
-}    
+function copy(array){
+//   let copy = [...originalFlavors];
+}  
+// return originalFlavors;
+// console.log(array(originalFlavors))  
 
 
 
@@ -63,9 +65,10 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-
+// taking 1 parameter- it's holding the place for an array
 function is31Flavors(/*your code here*/){
  /*your code here*/
+//  conditional - if true return true else return false... has to be exactly 31 flavors 
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -80,9 +83,10 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
+// 2 parameter array and strings which holds place for a new flavour 
 function addFlavor(/*your code here*/){
  /*your code here*/
+//  use unshift to add new flavour to beginning of the recieved array 
 }
 
 
@@ -113,9 +117,9 @@ Use the getFlavorByIndex function below to do the following:
 
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
-
+// array and number holding place for index
 function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+  /*your code here* array[0]*/
 }
 
 
@@ -136,6 +140,10 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(/*your code here*/){
   /*your code here*/
+  // loop through the array and check every index for the exact match of the string if it exist then remove it using splice
+
+  // .splice(start, how many items to delete);
+  
 }
 
 
@@ -159,11 +167,20 @@ Use the filterByWord function below to do the following:
 
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
-
-function filterByWord(/*your code here*/){
+// 2 params-array/string
+function filterByWord(array, string){
   /*your code here*/
+  // create a new arrray to push results to
+  // loop through the provided array
+  const filtered = [];
+  for(let i =0; i < array.length; i++){
+  if(array[i].includes(string)){
+    filtered.push(array[i]);
+  }
 }
-
+return filtered;
+}
+console.log('task 7:', filterByWord(originalFlavors, 'Chocolate'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
@@ -300,4 +317,3 @@ module.exports = {
   getAverageWordLength,
   getRandomFlavors
 }
-
