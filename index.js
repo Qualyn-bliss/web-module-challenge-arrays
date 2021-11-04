@@ -46,10 +46,9 @@ Use the copy function below to do the following:
 */
 
 function copy(array){
-//   let copy = [...originalFlavors];
+  return [...array];
 }  
-// return originalFlavors;
-// console.log(array(originalFlavors))  
+console.log('task 1',copy(originalFlavors));  
 
 
 
@@ -66,10 +65,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 // taking 1 parameter- it's holding the place for an array
-function is31Flavors(/*your code here*/){
- /*your code here*/
-//  conditional - if true return true else return false... has to be exactly 31 flavors 
+function is31Flavors(array){
+ if(array.length === 31){
+   return true;
+ }else{
+   return false;  
 }
+}
+console.log('task2: ', is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -84,10 +87,14 @@ Use the addFlavor function below to do the following:
 */
 
 // 2 parameter array and strings which holds place for a new flavour 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array,string ){
+ array.unshift("Rainbow Sherbert");
+ return array;
+ }
+ console.log( 'task 3', addFlavor(originalFlavors, "Rainbow Sherbert"));
+  /*your code here*/
 //  use unshift to add new flavour to beginning of the recieved array 
-}
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
